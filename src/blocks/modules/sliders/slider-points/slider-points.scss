@@ -1,0 +1,13 @@
+.advantages-slider {
+    display: none;
+}
+
+@media(max-width:1240px) {
+    .advantages-slider {
+        display: block;
+    }
+
+    .advantages__row_pc {
+        display: none !important;
+    }
+}

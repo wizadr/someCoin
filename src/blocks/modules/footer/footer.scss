@@ -1,0 +1,128 @@
+.footer {
+  background-color: #2a365c;
+  padding: 50px 0;
+  color: #939ebd;
+  font-size: 20px;
+  line-height: 147%;
+  transition: all 0.3s;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer-content__row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.footer-content__item {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+}
+
+.footer-content__item_menu {
+  display: flex;
+}
+
+.footer-content__logo {
+  max-width: 230px;
+}
+
+.footer-content__rights {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 30px;
+  max-width: 80%;
+}
+
+.footer-content__privacy {
+  position: relative;
+  color: #939ebd;
+  transition: all 0.3s;
+  text-decoration: none;
+  margin-top: 45px;
+}
+
+.footer-content__privacy span {
+  position: relative;
+  transition: all 0.3s;
+}
+
+.footer-content__privacy span:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #939ebd8b;
+  transition: all 0.3s;
+}
+
+.footer-content__privacy span:hover {
+  color: #fff;
+}
+
+.footer-content__privacy span:hover:after {
+  background-color: #fff;
+}
+
+.footer-menu {
+  margin-left: 100px;
+}
+
+.footer-menu:first-child {
+  margin-left: 15px;
+}
+
+.footer-menu__list {
+  margin-top: 30px;
+}
+
+.footer-menu__li:not(:first-child) {
+  margin-top: 10px;
+}
+
+.footer-menu__title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 123.5%;
+  text-transform: uppercase;
+}
+
+.footer-menu__link {
+  text-decoration: none;
+  color: #939ebd;
+}
+
+.footer-content__phone {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 123.5%;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.footer-content__mail {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer-content__mail_mt {
+  margin-top: 40px;
+}
+
+.footer-content__mail:nth-child(3) {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

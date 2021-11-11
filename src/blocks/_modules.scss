@@ -1,0 +1,91 @@
+@import "modules/animate/animate";
+
+
+
+@import "modules/header/header";
+
+
+@import "modules/main/main";
+@import "modules/page1/page1";
+@import "modules/advantages/advantages";
+@import "modules/portfolio/portfolio";
+@import "modules/aboutUs/aboutUs";
+@import "modules/expertise/expertise";
+@import "modules/sectors/sectors";
+@import "modules/methods/methods";
+@import "modules/forWho/forWho";
+@import "modules/ourCases/ourCases";
+@import "modules/approach/approach";
+@import "modules/partners/partners";
+@import "modules/sliders/slider-points/slider-points";
+@import "modules/page/page-engineering.scss";
+
+@import "modules/otherPages/otherPages.scss";
+
+@import "modules/footer/footer";
+
+
+
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+
+    &_1 {
+        display: none;
+
+    }
+
+    &_main {
+        position: relative;
+        font-size: 20px;
+        font-weight: 500;
+        color: #fff;
+        padding: 1rem 2.6rem;
+        border: 2px solid #fff;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        transition: all .3s;
+        min-width: 300px;
+        text-align: center;
+        animation-play-state: paused;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -30px;
+            width: 55px;
+            height: 20px;
+            background-image: url(../img/svg/btn-arrow.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: all .3s;
+            animation-play-state: paused;
+        }
+
+        &:hover {
+            background-color: #fff;
+            color: #1B2546;
+          
+
+            &::after {
+                animation-play-state: running;
+                animation: spin 2s infinite ease;
+            }
+        }
+    }
+}
+
+
+@keyframes spin {
+
+    0%,
+    100% {
+        transform: translate(0, -50%);
+    }
+
+    50% {
+        transform: translate(25px, -50%);
+    }
+}

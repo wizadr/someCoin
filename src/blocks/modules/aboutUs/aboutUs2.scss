@@ -1,0 +1,166 @@
+.aboutUs__content {
+    margin-top: 130px;
+}
+
+.aboutUs__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.aboutUs-col {
+
+    &_2 {
+        margin-top: 100px;
+        margin-left: 95px;
+    }
+
+    &_3 {
+        margin-top: 100px;
+        margin-left: 15px;
+    }
+}
+
+
+.aboutUs-col__p {
+    margin-top: 15px;
+    max-width: 224px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 147%;
+
+
+}
+
+.aboutUs-col__icon {
+    width: 40px;
+}
+
+
+.aboutUs-col-video {
+    margin-top: 65px;
+}
+
+.aboutUs__col:last-child {
+    max-width: 770px;
+    width: 100%;
+    margin-left: 15px;
+}
+
+.simplebar-mask,
+.simplebar-offset {
+    position: relative !important;
+}
+
+.simplebar-placeholder {
+    height: auto !important;
+}
+
+.aboutUs-col__p-last {
+    max-width: 620px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 147%;
+    margin-top: 15px;
+}
+.swiper-container-aboutUs {
+    position: relative;
+    display: none;
+}
+
+@media(max-width:1240px) {
+
+    .swiper-container-aboutUs {
+        display: flex;
+        padding-bottom: 50px;
+    }
+
+    .aboutUs__col_replaceIn {
+        display: none;
+    }
+
+    .aboutUs__col.aboutUs__advantages {
+        display: none;
+    }
+
+    .aboutUs__col:last-child {
+        max-width: 100%;
+    }
+
+    .aboutUs__col:last-child {
+        margin-left: 0;
+        padding-bottom: 10px;
+    }
+
+    .aboutUs-overflow {
+       display: none;
+    }
+
+
+    .aboutUs__advantages {
+        display: flex;
+
+        .aboutUs-col:not(:first-child) {
+            margin-left: 0;
+        }
+
+        .aboutUs-col {
+            height: 300px;
+            width: auto;
+            max-width: auto;
+            background: #2A365C;
+            padding: 30px 25px;
+            border-radius: 5px;
+        }
+    }
+
+    .aboutUs__content {
+        flex-direction: column;
+        margin-top: 60px;
+    }
+
+    .aboutUs-col__video {
+        margin-top: 40px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .aboutUs-col__p {
+        max-width: 100%;
+        flex-shrink: 0;
+        flex-grow: 1;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 132.5%;
+    }
+
+    .aboutUs-col {
+
+        &_2 {
+            margin-top: 0;
+            margin-left: 0;
+        }
+
+        &_3 {
+            margin-top: 0;
+            margin-left: 0;
+        }
+    }
+
+    .aboutUs-col-video {
+        margin-top: 40px;
+    }
+}
+
+@media(max-width:650px) {
+    .aboutUs-col__video {
+        max-width: 100%;
+    }
+}

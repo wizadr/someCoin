@@ -1,0 +1,63 @@
+.section-ourCases {
+    padding-top: 160px;
+}
+
+.ourCases__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ourCases__p {
+    max-width: 760px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 147%;
+}
+
+.ourCases__item_img {
+    display: flex;
+    max-width: 620px;
+}
+
+.ourCases__img {
+    width: 100% !important;
+    max-width: 200px;
+}
+
+.ourCases__item_img {
+    margin-left: 15px;
+
+    div:nth-child(2) {
+        margin: 0 40px;
+    }
+}
+
+
+@media(max-width:768px) {
+    .ourCases__row {
+        flex-direction: column;
+    }
+
+    .ourCases__item_img {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+    }
+
+    .section-ourCases {
+        padding-top: 80px;
+    }
+
+    .ourCases__p {
+        margin-top: 30px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 132.5%;
+    }
+}
