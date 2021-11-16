@@ -1,8 +1,13 @@
 "use strict";
 import $ from "jquery";
-import wow from "wowjs";
+import {WOW} from "wowjs";
 import simpleParallax from "simple-parallax-js";
 import simplebar from "simplebar";
+
+
+var wow = new WOW({
+    live: false
+}).init();
 
 //burger
 window.addEventListener("DOMContentLoaded", () => {
@@ -115,7 +120,7 @@ if (document.querySelector(".page1__img")) {
   let firstImgMobContainer = document.querySelector(".page1__mob-img");
   let firstImgPcContainer = document.querySelector(".page1__item:last-child");
 
-  var firstImgPeplace = function firstImgPeplace() {
+  var firstImgReplace = function firstImgReplace() {
     if (window.innerWidth <= 1024) {
       firstImgMobContainer.insertBefore(
         firstImg,
@@ -130,8 +135,8 @@ if (document.querySelector(".page1__img")) {
   };
 
   if (window.innerWidth <= 1024) {
-    firstImgPeplace();
+    firstImgReplace();
   }
 
-  window.addEventListener("resize", firstImgPeplace);
+  window.addEventListener("resize", firstImgReplace);
 }
