@@ -97,7 +97,6 @@ parallaxInit();
 
 $(document).ready(function () {
   $(".header__link_submenu_wrap").click(function () {
-    console.log("click");
 
     $(this).find(".submenu__arrow-wrap svg").css({ transform: "rotate(0deg)" });
 
