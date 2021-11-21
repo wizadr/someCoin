@@ -977,6 +977,8 @@
   .page1-group__item {
     flex-basis: calc(50% - 50px);
   }
+
+
   
   .page1-group__item:first-child {
     max-width: 620px;
@@ -1283,6 +1285,8 @@
   
   .main-p_soft {
     margin-top: 60px !important;
+    font-size: 20px;
+    line-height: 1.5;
   }
   
   .soft-grid {
@@ -1290,6 +1294,16 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
+  }
+
+  .soft-grid p {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  
+  .soft-grid_ai-center {
+    align-items: center;
   }
   
   .page-soft-img1_mob {
@@ -1308,6 +1322,8 @@
   .page1-intel__body_exp p {
     max-width: 620px;
   }
+
+
   
   .section-expertise_page-exp {
     padding: 0 0 90px;
