@@ -29,11 +29,12 @@
 }
 
 .advantages__item {
-    // flex-basis: 16.666%;
-
     display: flex;
     align-items: center;
-
+    padding: 5px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all .3s;
 }
 
 .advantages-item__icon {
