@@ -9,6 +9,7 @@ var wow = new WOW({
     live: false
 }).init();
 
+
 //burger
 window.addEventListener("DOMContentLoaded", () => {
   const menu = document.querySelector(".header__list"),
