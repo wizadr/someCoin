@@ -20,7 +20,28 @@
 .footer-content__item {
   display: flex;
   flex-direction: column;
-  max-width: 320px;
+  flex-basis: 25%;
+}
+
+
+@media(max-width:1024px) {
+  .footer-content__row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-content__item  {
+    align-items: center;
+  }
+
+  .footer-content__item_menu {
+    margin-top: 40px;
+  }
+
+  .footer-content__item:not(:first-child)  {
+    margin-top: 40px;
+  }
 }
 
 .footer-content__item_menu {

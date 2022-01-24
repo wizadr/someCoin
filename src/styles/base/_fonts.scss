@@ -19,3 +19,8 @@ body {
     color: #FFFFFF;
 }
 
+@media(max-width:550px) {
+    .main-h2 {
+        font-size: 32px;
+    }   
+}

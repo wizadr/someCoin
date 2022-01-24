@@ -5,6 +5,7 @@ import simpleParallax from "simple-parallax-js";
 import simplebar from "simplebar";
 
 
+
 var wow = new WOW({
     live: false
 }).init();

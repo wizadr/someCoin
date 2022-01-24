@@ -1,0 +1,233 @@
+$donut-slices: (
+  first: #ff6838,
+  second: #ffc820,
+  third: #97c95c,
+  fourth: #1cb2f6,
+  fifth: #1685b8,
+  sixth: #f45b69,
+);
+
+.donut {
+  --donut-size: 400px;
+  --donut-border-width: 80px;
+
+  --donut-spacing: 0;
+  --donut-spacing-color: 255, 255, 255;
+  --donut-spacing-deg: calc(1deg * var(--donut-spacing));
+
+  border-radius: 50%;
+  height: var(--donut-size);
+  margin: 40px;
+  position: relative;
+  width: var(--donut-size);
+}
+
+
+.donut__label {
+  left: 50%;
+  line-height: 1.5;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+
+.donut__label__heading {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.donut__label__sub {
+  color: #666666;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
+
+.donut__slice {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.donut__slice::before,
+.donut__slice::after {
+  border: var(--donut-border-width) solid rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: rotate(45deg);
+  width: 100%;
+}
+
+.donut__slice::before {
+  border-width: calc(var(--donut-border-width) + 1px);
+  box-shadow: 0 0 1px 0 #{"rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)))"};
+}
+
+$slides-concat: "";
+
+@each $slice in $donut-slices {
+  $name: nth($slice, 1);
+  $color: nth($slice, 2);
+  $i: index($donut-slices, $slice);
+
+  @if $i > 1 {
+    .donut__slice__#{$name} {
+      --#{$name}-start: calc(#{$slides-concat});
+      --#{$name}-check: max(calc(var(--#{$name}-start) - 0.5), 0);
+      clip-path: inset(
+        0 calc(50% * (var(--#{$name}-check) / var(--#{$name}-check))) 0 0
+      );
+    }
+  } @else {
+    .donut__slice__#{$name} {
+      --#{$name}-start: 0;
+    }
+  }
+
+  .donut__slice__#{$name}::before {
+    border-top-color: #{"rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)))"};
+    transform: rotate(calc(360deg * var(--#{$name}-start) + 45deg));
+  }
+
+  .donut__slice__#{$name}::after {
+    border-top-color: rgba($color, 1);
+    border-right-color: rgba($color, calc(100 * (var(--#{$name}) - 0.25)));
+    border-bottom-color: rgba($color, calc(100 * (var(--#{$name}) - 0.5)));
+    border-left-color: rgba($color, calc(100 * (var(--#{$name}) - 0.75)));
+    transform: rotate(
+      calc(360deg * var(--#{$name}-start) + 45deg + var(--donut-spacing-deg))
+    );
+  }
+
+  @if $i == 1 {
+    $slides-concat: var(--#{$name});
+  } @else {
+    $slides-concat: $slides-concat + " + " + var(--#{$name});
+  }
+}
+
+.tokenomica {
+  padding: 120px 0 0;
+}
+
+.tokenomica__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .tokenomica__body {
+    flex-direction: column;
+  }
+}
+
+.tokenomica__list {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+
+@media (max-width: 550px) {
+    .donut {
+      --donut-size: 280px;
+      --donut-border-width: 40px;
+    }
+
+    .tokenomica__list {
+        font-size: 16px;
+      }
+  }
+  
+
+.tokenomica__li {
+  display: flex;
+  align-items: center;
+}
+
+.color-prop {
+  position: relative;
+}
+
+.color-prop::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(
+    269.09deg,
+    rgba(42, 54, 92, 0.7) 15.01%,
+    rgba(54, 67, 108, 0.7) 99.35%
+  );
+  border-radius: 50%;
+}
+
+.tokenomica__li:not(:first-child) {
+  margin-top: 15px;
+}
+
+.tokenomica__li .color-prop {
+  flex-shrink: 0;
+}
+
+.tokenomica__li:nth-child(1) .color-prop {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: #ff6838;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.tokenomica__li:nth-child(2) .color-prop {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: #ffc820;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.tokenomica__li:nth-child(3) .color-prop {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: #97c95c;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.tokenomica__li:nth-child(4) .color-prop {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: #1cb2f6;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.tokenomica__li:nth-child(5) .color-prop {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: #1685b8;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.tokenomica__li:nth-child(6) .color-prop {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: #f45b69;
+  border-radius: 50%;
+  margin-right: 10px;
+}
